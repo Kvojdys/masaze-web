@@ -70,6 +70,9 @@ a:hover { text-decoration: underline; }
 .price-list { display: grid; gap: 8px; margin-top: 8px; }
 .price-list div { display: flex; justify-content: space-between; padding: 8px 10px; background: var(--bg-alt); border-radius: 10px; }
 .note { margin-top: 14px; font-size: 14px; color: var(--muted); }
+.price-list strong {
+  white-space: nowrap;
+}
 
 /* FAQ */
 .faq { display: grid; gap: 10px; }
