@@ -104,3 +104,54 @@ input:focus, textarea:focus { outline: none; border-color: var(--brand); box-sha
   .site-header nav.open { display: grid; position: absolute; right: 12px; top: 64px; background: #fff; border: 1px solid var(--border); padding: 10px; border-radius: 12px; }
   .site-header nav.open a { padding: 6px 8px; }
 }
+
+
+/* Kontakt */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 2rem 0;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  background: #c5a880; /* béžová podle webu */
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #a98f6c;
+}
+
+/* Barevné oddělení sekcí */
+.section {
+  background-color: #ffffff; /* výchozí bílá */
+  padding: 4rem 1rem;
+}
+
+.section.alt-bg {
+  background-color: #f3eee7; /* béžová */
+}

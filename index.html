@@ -5,8 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tomáš Kloc – nevidomý masér v Praze Záběhlicích | Sportovní, klasická a relaxační masáž</title>
 <meta name="description" content="Tomáš Kloc je nevidomý masér působící v Praze Záběhlicích v posilovně Kentoya. Nabízí sportovní, klasické a relaxační masáže, uvolnění trigger pointů a další techniky. Objednejte si termín online.">
-<link rel="canonical" href="https://www.masazetk.cz/">
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:site_name" content="Masáže Tomáš Kloc">
+<meta property="og:url" content="https://www.masazetk.cz/">
+<meta property="og:title" content="Tomáš Kloc – nevidomý masér v Praze Záběhlicích">
+<meta property="og:description" content="Sportovní, klasická a relaxační masáž, uvolnění trigger pointů – Posilovna Kentoya, Praha Záběhlice. Objednejte se online.">
+<meta property="og:image" content="https://www.masazetk.cz/images/hero-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tomáš Kloc – nevidomý masér v Posilovně Kentoya, Praha Záběhlice">
 
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tomáš Kloc – nevidomý masér v Praze Záběhlicích">
+<meta name="twitter:description" content="Sportovní, klasická a relaxační masáž, trigger pointy – objednejte se online.">
+<meta name="twitter:image" content="https://www.masazetk.cz/images/hero-og.jpg">
+<meta name="twitter:site" content="@tvoje_twitter_jmeno">
+<link rel="canonical" href="https://www.masazetk.cz/">
+<!-- Content Security Policy (přísnější zdroje) -->
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self';
+               style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+               font-src 'self' https://fonts.gstatic.com;
+               img-src 'self' data:;
+               frame-src https://www.google.com https://*.google.com https://*.google.cz;
+               connect-src 'self';
+               upgrade-insecure-requests">
+
+<!-- Referrer Policy (omezí předávání URL) -->
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self';
+               style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+               font-src 'self' https://fonts.gstatic.com;
+               img-src 'self' data:;
+               frame-src https://tomas-kloc.reservio.com https://*.reservio.com;
+               form-action 'self' https://formspree.io;
+               connect-src 'self' https://formspree.io;
+               upgrade-insecure-requests">
+
+<!-- XSS Auditor náhrada nemá smysl; důležité je CSP výše -->
 <link rel="preload" href="images/hero.jpg" as="image">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -110,7 +153,7 @@
   
 
     <!-- Služby & ceník -->
-    <section id="services" class="section">
+    <section id="services" class="section alt-bg">
       <div class="container">
         <h2>Služby &amp; ceník</h2>
         <div class="cards">
@@ -150,7 +193,7 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="section section-alt">
+    <section id="faq" class="section">
       <div class="container">
         <h2>Časté dotazy (FAQ)</h2>
         <div class="faq">
@@ -183,17 +226,22 @@
   
     
 
-  <section id="reservation" class="section">
+ <section id="reservation" class="section alt-bg">
   <div class="container">
     <h2>Online rezervace</h2>
     <p>Vyberte si termín, který vám vyhovuje:</p>
-    <iframe src="https://tomas-kloc.reservio.com" 
-            style="border:0; width:100%; height:700px;" 
-            frameborder="0">
+
+    <iframe
+      src="https://tomas-kloc.reservio.com"
+      title="Rezervace – Tomáš Kloc"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      style="border:0; width:100%; height:700px;"
+      frameborder="0">
     </iframe>
+
   </div>
 </section>
-
 
 
 
@@ -214,41 +262,61 @@
           <div class="map-embed">
             <iframe title="Mapa - Praha" loading="lazy" allowfullscreen 
               referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.6032640046724!2d14.505564676899265!3d50.05626291566721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b92543140eb85%3A0xa65c9d6b8abf654e!2sKentoya%20Fitness!5e0!3m2!1sen!2scz!4v1755791607577!5m2!1sen!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>">
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.6032640046724!2d14.505564676899265!3d50.05626291566721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b92543140eb85%3A0xa65c9d6b8abf654e!2sKentoya%20Fitness!5e0!3m2!1sen!2scz!4v1755791607577!5m2!1sen!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </iframe>
           </div>
         </div>
-        <div class="form-card">
-          <h3>Máte dotaz? Napište mi</h3>
-          <form id="contactForm" novalidate>
-            <div class="field">
-              <label for="name">Jméno</label>
-              <input id="name" name="name" type="text" placeholder="Vaše jméno" required>
-              <small class="error" aria-live="polite"></small>
-            </div>
-            <div class="field">
-              <label for="email">E-mail</label>
-              <input id="email" name="email" type="email" placeholder="vas@email.cz" required>
-              <small class="error" aria-live="polite"></small>
-            </div>
-            <div class="field">
-              <label for="message">Zpráva</label>
-              <textarea id="message" name="message" rows="5" placeholder="S čím mohu pomoci?" required></textarea>
-              <small class="error" aria-live="polite"></small>
-            </div>
-            <button type="submit" class="btn btn-primary">Odeslat</button>
-            <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
-            <p class="mini-note">Odesláním souhlasíte se zpracováním osobních údajů za účelem vyřízení dotazu.</p>
-          </form>
-        </div>
+        <!-- Kontakt -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Kontaktujte mě</h2>
+    <p>Máte dotaz? Napište mi nebo použijte formulář níže.</p>
+
+    <!-- Bezpečně zobrazený e-mail -->
+    <p>
+      E-mail: <a href="#" id="mail">nahrává se…</a>
+    </p>
+
+    <!-- Formspree formulář -->
+    <form action="https://formspree.io/f/xxxxxx" method="POST" class="contact-form">
+      <label>
+        Jméno:
+        <input type="text" name="name" required>
+      </label>
+
+      <label>
+        E-mail:
+        <input type="email" name="email" required>
+      </label>
+
+      <label>
+        Zpráva:
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+
+      <!-- honeypot proti botům -->
+      <input type="text" name="_gotcha" style="display:none">
+
+      <button type="submit">Odeslat</button>
+    </form>
+  </div>
+</section>
+
+<!-- Skript pro e-mail -->
+<script>
+  const m = "masaze" + "@" + "example.cz"; // <- změň na tvůj e-mail
+  const mail = document.getElementById("mail");
+  mail.href = "mailto:" + m;
+  mail.innerText = m;
+</script>
       </div>
     </section>
   </main>
 
 
 
- <!-- Recenze -->
-    <section id="reviews" class="section section-alt">
+ <!-- Recenze 
+    <section id="reviews" class=" section-alt">
       <div class="container">
         <h2>Recenze klientů</h2>
         <div class="reviews">
@@ -270,7 +338,7 @@
         </div>
       </div>
     </section>
-
+-->
 
   <footer class="site-footer">
     <div class="container footer-grid">
