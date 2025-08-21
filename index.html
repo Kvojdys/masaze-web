@@ -3,13 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
- <title>Tomáš Kloc – nevidomý masér v Praze Záběhlicích | Sportovní, klasická a relaxační masáž</title>
-  <meta name="description" content="Tomáš Kloc je nevidomý masér působící v Praze Záběhlicích v posilovně Kentoya. Nabízí sportovní, klasické, relaxační a sportovní masáže, trigger point terapii a mnoho dalšího. Objednejte si termín online.">
-  <link rel="preload" href="images/hero.jpg" as="image">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<title>Tomáš Kloc – nevidomý masér v Praze Záběhlicích | Sportovní, klasická a relaxační masáž</title>
+<meta name="description" content="Tomáš Kloc je nevidomý masér působící v Praze Záběhlicích v posilovně Kentoya. Nabízí sportovní, klasické a relaxační masáže, uvolnění trigger pointů a další techniky. Objednejte si termín online.">
+<link rel="canonical" href="https://www.masazetk.cz/">
+
+<link rel="preload" href="images/hero.jpg" as="image">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<!-- Strukturovaná data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MassageTherapist",
+  "name": "Masáže Tomáš Kloc",
+  "description": "Tomáš Kloc je nevidomý masér v Praze Záběhlicích (posilovna Kentoya). Nabízí sportovní, klasické a relaxační masáže a uvolnění trigger pointů.",
+  "image": "https://www.masazetk.cz/images/hero.jpg",
+  "@id": "https://www.masazetk.cz/#business",
+  "url": "https://www.masazetk.cz/",
+  "telephone": "+420123456789",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Posilovna Kentoya, Záběhlice",
+    "addressLocality": "Praha",
+    "postalCode": "10600",
+    "addressCountry": "CZ"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 50.056,
+    "longitude": 14.498
+  },
+  "openingHours": [
+    "Mo-Fr 09:00-19:00"
+  ],
+  "priceRange": "CZK",
+  "areaServed": "Praha"
+}
+</script>
+
 </head>
 <body>
   <header class="site-header" id="top">
@@ -226,6 +260,20 @@
       </div>
     </section>
   </main>
+
+
+
+
+  <section id="reservation" class="section">
+  <div class="container">
+    <h2>Online rezervace</h2>
+    <p>Vyberte si termín, který vám vyhovuje:</p>
+    <iframe src="https://tomas-kloc.reservio.com" 
+            style="border:0; width:100%; height:700px;" 
+            frameborder="0">
+    </iframe>
+  </div>
+</section>
 
 
 
