@@ -1,80 +1,49 @@
-// ---------- Config ----------
-const FORMSPREE_ENDPOINT = ""; // vyplňte svůj endpoint, jinak se použije mailto
+// DOM ready helper
+const onReady = (fn) => {
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", fn);
+  } else {
+    fn();
+  }
+};
 
-// ---------- Helpers ----------
-const $ = (sel, root = document) => root.querySelector(sel);
-const form = $("#contactForm");
-const statusEl = $("#formStatus");
-const yearEl = $("#year");
-const nav = document.querySelector('.site-header nav');
-const navToggle = document.querySelector('.nav-toggle');
+onReady(() => {
+  // Mobile nav toggle
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".site-nav");
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
 
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+  // Footer year
+  const y = document.getElementById("year");
+  if (y) y.textContent = new Date().getFullYear();
 
-// Mobile nav
-navToggle?.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', String(open));
-});
+  // E-mail antispam (vyplní #mail)
+  const a = document.getElementById("mail");
+  if (a) {
+    const m = "masaze" + "@" + "example.cz"; // TODO: nahraď reálným e-mailem
+    a.href = "mailto:" + m;
+    a.textContent = m;
+  }
 
-// Validation
-function validate() {
-  let valid = true;
-  const fields = ['name', 'email', 'message'];
-  fields.forEach(id => {
-    const input = document.getElementById(id);
-    const error = input.nextElementSibling;
-    if (!input.value.trim()) { error.textContent = 'Toto pole je povinné.'; valid = false; }
-    else if (id === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) { error.textContent = 'Zadejte platný e-mail.'; valid = false; }
-    else { error.textContent = ''; }
-  });
-  return valid;
-}
-
-// Senders
-async function sendViaFormspree(payload) {
-  const res = await fetch(FORMSPREE_ENDPOINT, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify(payload)
-  });
-  if (!res.ok) throw new Error('Chyba odeslání.');
-  return res.json();
-}
-function sendViaMailto(payload) {
-  const to = 'masaze@example.cz'; // změňte na svůj e-mail
-  const subject = encodeURIComponent('Nová zpráva z webu – kontakt');
-  const body = encodeURIComponent(`Jméno: ${payload.name}\nE-mail: ${payload.email}\n\nZpráva:\n${payload.message}`);
-  window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-}
-
-// Submit
-form?.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  if (!validate()) return;
-
-  const payload = {
-    name: $('#name').value.trim(),
-    email: $('#email').value.trim(),
-    message: $('#message').value.trim()
-  };
-
-  statusEl.textContent = 'Odesílám...';
-  statusEl.className = 'form-status';
-
-  try {
-    if (FORMSPREE_ENDPOINT) {
-      await sendViaFormspree(payload);
-      statusEl.textContent = 'Zpráva byla odeslána. Děkuji!';
-      statusEl.classList.add('success');
-      form.reset();
-    } else {
-      sendViaMailto(payload);
-      statusEl.textContent = 'Otevírám e-mailovou aplikaci…';
-      statusEl.classList.add('success');
-    }
-  } catch (err) {
-    statusEl.textContent = 'Nepodařilo se odeslat. Zkuste to prosím znovu.';
-    statusEl.classList.add('fail');
+  // Jemný reveal on scroll
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const targets = document.querySelectorAll(".reveal");
+  if (!prefersReduced && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add("visible");
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -10% 0px" });
+    targets.forEach(el => io.observe(el));
+  } else {
+    targets.forEach(el => el.classList.add("visible"));
   }
 });

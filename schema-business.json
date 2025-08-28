@@ -1,0 +1,27 @@
+{
+  "@context": "https://schema.org",
+  "@type": "MassageTherapist",
+  "name": "Masáže Tomáš Kloc",
+  "description": "Tomáš Kloc je nevidomý masér v Praze Záběhlicích (posilovna Kentoya). Nabízí sportovní, klasické a relaxační masáže a uvolnění trigger pointů.",
+  "image": "https://www.masazetk.cz/images/hero.jpg",
+  "@id": "https://www.masazetk.cz/#business",
+  "url": "https://www.masazetk.cz/",
+  "telephone": "+420123456789",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Posilovna Kentoya, Záběhlice",
+    "addressLocality": "Praha",
+    "postalCode": "10600",
+    "addressCountry": "CZ"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 50.056,
+    "longitude": 14.498
+  },
+  "openingHours": [
+    "Mo-Fr 09:00-19:00"
+  ],
+  "priceRange": "CZK",
+  "areaServed": "Praha"
+}

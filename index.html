@@ -79,16 +79,16 @@
   </script>
 
   <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"Jak se objednat?","acceptedAnswer":{"@type":"Answer","text":"Nejrychleji přes online rezervace (Reservio) nebo telefonicky."}},
-    {"@type":"Question","name":"Kde sídlíte?","acceptedAnswer":{"@type":"Answer","text":"Kentoya Fitness, Topolová 2916/14, Praha – Záběhlice."}},
-    {"@type":"Question","name":"Jaké masáže nabízíte?","acceptedAnswer":{"@type":"Answer","text":"Sportovní, klasické, relaxační, uvolnění trigger pointů."}}
-  ]
-}
-</script>
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Jak se objednat?","acceptedAnswer":{"@type":"Answer","text":"Nejrychleji přes online rezervace (Reservio) nebo telefonicky."}},
+      {"@type":"Question","name":"Kde sídlíte?","acceptedAnswer":{"@type":"Answer","text":"Kentoya Fitness, Topolová 2916/14, Praha – Záběhlice."}},
+      {"@type":"Question","name":"Jaké masáže nabízíte?","acceptedAnswer":{"@type":"Answer","text":"Sportovní, klasické, relaxační, uvolnění trigger pointů."}}
+    ]
+  }
+  </script>
 </head>
 <body>
   <div id="top"></div> <!-- kotva pro scroll nahoru -->
@@ -96,14 +96,13 @@
   <header class="site-header">
     <div class="container nav">
       <a href="#top" class="brand">
-        <img src="assets/logo.png" alt="Masáže Jméno Příjmení" class="logo">
+        <img src="assets/logo.png" alt="Masáže Tomáš Kloc" class="logo" width="132" height="40" decoding="async">
       </a>
-      <nav>
+      <nav class="site-nav" aria-label="Hlavní navigace">
         <a href="#about">O mně</a>
         <a href="#services">Služby &amp; ceník</a>
         <a href="#reservation">Rezervace</a>
         <a href="#faq">FAQ</a>
-         
         <a href="#contact">Kontakt</a>
       </nav>
       <button class="nav-toggle" aria-label="Otevřít menu" aria-expanded="false">☰</button>
@@ -111,41 +110,32 @@
   </header>
 
   <main>
-    <!-- HERO -->
-   <section class="hero">
-  <img src="images/hero.jpg" alt="Masáže Tomáš Kloc v Praze Záběhlicích">
-  <div class="hero-overlay">
-    <div class="hero-content">
-
-      <!-- desktop text -->
-      <h1 class="hero-desktop">MASÁŽE PRO TĚLO I MYSL</h1>
-      <p class="hero-desktop">Profesionální masáže v klidném a čistém prostředí - Praha Záběhlice</p>
-
-      <!-- mobilní text -->
-      <h1 class="hero-mobile">Masáže pro tělo i mysl</h1>
-      <p class="hero-mobile">Praha - Záběhlice</p>
-
-      <div class="hero-cta">
-        <a href="#reservation" class="btn btn-primary">Rezervace</a>
-        <a href="#contact" class="btn btn-outline">Kontakt</a>
+    <!-- HERO (stabilní bez parallaxu) -->
+    <section class="hero" id="hero" aria-label="Úvod">
+      <div class="hero__media">
+        <img
+          src="images/hero.jpg"
+          alt="Masáže – ilustrační fotografie"
+          class="hero__img"
+          decoding="async"
+          fetchpriority="high">
       </div>
-    </div>
-  </div>
-</section>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__content">
+        <h1>MASÁŽE PRO TĚLO I MYSL</h1>
+        <p>Profesionální masáže v klidném a čistém prostředí – Praha Záběhlice</p>
+        <a href="#reservation" class="btn btn-primary">Rezervace</a>
+      </div>
+    </section>
 
     <!-- O mně -->
     <section id="about" class="section">
       <div class="container grid-2">
-        <div>
+        <div class="reveal">
           <h2>O mně</h2>
           <p>
-           Jmenuji se Tomáš Kloc a jsem masér působící v Praze. Možná vás překvapí, že jsem nevidomý – ale právě díky tomu dokážu masáž vnímat jinak než většina lidí. Oči sice nemám k dispozici, ale o to více spoléhám na dotek a cit v rukou. Díky tomu dokážu rozpoznat i drobné napětí, které by jinak zůstalo skryté, a zaměřit se přesně tam, kde je potřeba.
-
-           K masážím mě přivedla touha pomáhat lidem cítit se lépe – zbavit je stresu, bolesti zad nebo prostě jen dopřát chvíli odpočinku. Masáž beru jako spojení péče o tělo i mysl. Věřím, že každý si zaslouží čas pro sebe a možnost zastavit se v dnešní uspěchané době.
-
-           Moje práce je pro mě zároveň i velká radost. Neberu ji jen jako povolání, ale i jako možnost potkávat se s novými lidmi a vytvářet přátelskou a uvolněnou atmosféru. Klienti u mě často říkají, že si kromě masáže odnášejí i dobrou náladu – a to je pro mě ta nejlepší zpětná vazba.
-
-           Pokud hledáte masáž, která je nejen profesionální, ale i osobní a lidská, rád vás přivítám.
+          Jmenuji se Tomáš Kloc a jsem masér působící v Praze. Možná vás překvapí, že jsem nevidomý – ale právě díky tomu dokážu masáž vnímat jinak než většina lidí. Oči sice nemám k dispozici, ale o to více spoléhám na dotek a cit v rukou. Díky tomu dokážu rozpoznat i drobné napětí, které by jinak zůstalo skryté, a zaměřit se přesně tam, kde je potřeba. K masážím mě přivedla touha pomáhat lidem cítit se lépe – zbavit je stresu, bolesti zad nebo prostě jen dopřát chvíli odpočinku. Masáž beru jako spojení péče o tělo i mysl. Věřím, že každý si zaslouží čas pro sebe a možnost zastavit se v dnešní uspěchané době. Moje práce je pro mě zároveň i velká radost. Neberu ji jen jako povolání, ale i jako možnost potkávat se s novými lidmi a vytvářet přátelskou a uvolněnou atmosféru. Klienti u mě často říkají, že si kromě 
+          masáže odnášejí i dobrou náladu – a to je pro mě ta nejlepší zpětná vazba. Pokud hledáte masáž, která je nejen profesionální, ale i osobní a lidská, rád vás přivítám.
           </p>
           <ul class="ticks">
             <li>Vystudovaný sportovní a rekondiční masér</li>
@@ -153,56 +143,61 @@
             <li>Možnost dárkových poukazů a permanentek</li>
           </ul>
         </div>
-        <div class="about-card">
-          <img src="images/about.jpg" alt="Masážní technika – detail rukou při práci">
+        <div class="about-card reveal">
+          <img src="images/about.jpg" alt="Masážní technika – detail rukou při práci" loading="lazy">
         </div>
       </div>
     </section>
 
-  
-
     <!-- Služby & ceník -->
     <section id="services" class="section alt-bg">
       <div class="container">
-        <h2>Služby &amp; ceník</h2>
+        <h2 class="reveal">Služby &amp; ceník</h2>
         <div class="cards">
-          <article class="card">
+          <article class="card reveal">
             <h3>Klasická masáž</h3>
-            <p>Tradiční metoda relaxace a rehabilitace, která kombinuje různé techniky péče o tělo, včetně hladění, hnětení a tlaku na svaly a tkáně. Cílem je uvolnit napětí, zlepšit průtok krve a podpořit celkový pocit pohody a uvolnění. Tato masáž je ideální pro ty, kteří hledají způsob, jak redukovat stres a zlepšit fyzický i duševní stav.</p>
+            <p>Klasická masáž
+Tradiční metoda relaxace a rehabilitace, která kombinuje různé techniky péče o tělo, včetně hladění, hnětení a tlaku na svaly a tkáně. 
+Cílem je uvolnit napětí, zlepšit průtok krve a podpořit celkový pocit pohody a uvolnění. Tato masáž je ideální pro ty, kteří hledají způsob, 
+jak redukovat stres a zlepšit fyzický i duševní stav.</p>
             <div class="price-list">
               <div><span>30 min</span><strong>590 Kč</strong></div>
               <div><span>60 min</span><strong>790 Kč</strong></div>
               <div><span>90 min</span><strong>990 Kč</strong></div>
             </div>
           </article>
-          <article class="card">
+          <article class="card reveal">
             <h3>Sportovní masáž</h3>
-            <p>Sportovní masáž je specializovaná technika péče o tělo, která se zaměřuje na svaly a tkáně spojené se sportovní aktivitou. Tato masáž kombinuje různé techniky, včetně hlubokého tlaku, protahování a manipulaci svalů, aby podpořila regeneraci, zvýšila pružnost a zlepšila výkonnost. Je ideální pro sportovce nebo ty, kteří pravidelně cvičí a chtějí maximalizovat svůj výkon a minimalizovat riziko zranění.</p>
+            <p>Sportovní masáž je specializovaná technika péče o tělo, která se zaměřuje na svaly a tkáně spojené se sportovní aktivitou. Tato masáž kombinuje různé techniky, včetně hlubokého tlaku, protahování a manipulaci svalů, aby podpořila regeneraci, zvýšila pružnost a zlepšila výkonnost. 
+              Je ideální pro sportovce nebo ty, kteří pravidelně cvičí a chtějí maximalizovat svůj výkon a minimalizovat riziko zranění.</p>
             <div class="price-list">
               <div><span>30 min</span><strong>590 Kč</strong></div>
               <div><span>60 min</span><strong>790 Kč</strong></div>
               <div><span>90 min</span><strong>990 Kč</strong></div>
             </div>
           </article>
-          <article class="card">
+          <article class="card reveal">
             <h3>Trigger point masáž</h3>
-            <p>Trigger point masáž je terapeutická technika zaměřená na identifikaci a léčbu tzv. trigger bodů, což jsou malé, bolestivé oblasti v svalové tkáni, které se mohou objevit v důsledku přetížení, stresu nebo špatného držení těla. Během této masáže se aplikuje tlak na tyto body, aby se uvolnilo napětí, zmírnila bolest a obnovila pohyblivost svalů. Trigger point masáž je efektivní pro ty, kteří trpí chronickou bolestí, svalovými dysfunkcemi nebo omezenou pohyblivostí.</p>
+            <p>Trigger point masáž je terapeutická technika zaměřená na identifikaci a léčbu tzv. trigger bodů, což jsou malé, bolestivé oblasti v svalové tkáni, 
+              které se mohou objevit v důsledku přetížení, stresu nebo špatného držení těla. Během této masáže se aplikuje tlak na tyto body, aby se uvolnilo napětí, 
+              zmírnila bolest a obnovila pohyblivost svalů. Trigger point masáž je efektivní pro ty, kteří trpí chronickou bolestí, svalovými dysfunkcemi nebo omezenou pohyblivostí.</p>
             <div class="price-list">
               <div><span>30 min</span><strong>520 Kč</strong></div>
               <div><span>45 min</span><strong>790 Kč</strong></div>
               <div><span>60 min</span><strong>850 Kč</strong></div>
             </div>
           </article>
-           <article class="card">
+          <article class="card reveal">
             <h3>Relaxační masáž</h3>
-            <p>Relaxační masáž je metoda péče o tělo zaměřená na uvolnění napětí a zklidnění mysli. Tato terapeutická technika spočívá v jemných pohybech, hladění a mírném tlaku na svaly a tkáně s cílem podpořit relaxaci a celkový pocit pohody. Relaxační masáž je ideální pro ty, kteří hledají odpočinek od každodenního stresu a napětí, a chtějí si dopřát chvíli pro regeneraci a obnovení energie.</p>
+            <p>Relaxační masáž je metoda péče o tělo zaměřená na uvolnění napětí a zklidnění mysli. Tato terapeutická technika spočívá v jemných pohybech, hladění a mírném tlaku na svaly a tkáně s cílem podpořit relaxaci a celkový pocit pohody. Relaxační masáž je ideální pro ty, 
+              kteří hledají odpočinek od každodenního stresu a napětí, a chtějí si dopřát chvíli pro regeneraci a obnovení energie.</p>
             <div class="price-list">
               <div><span>30 min</span><strong>520 Kč</strong></div>
               <div><span>45 min</span><strong>790 Kč</strong></div>
               <div><span>60 min</span><strong>850 Kč</strong></div>
             </div>
           </article>
-   <article class="card">
+          <article class="card reveal">
             <h3>Lávové kameny</h3>
             <p>Lávová kameny procedura je relaxační terapeutická metoda, při které se využívají hladké, vyhřáté lávové kameny k masáži těla. Tyto kamínky se umístí na strategická místa těla a pak jsou použity k jemnému masírování svalů. Tato terapie pomáhá uvolnit napětí, zlepšit průtok krve a podpořit celkový pocit pohody. Je to skvělá volba pro ty, kteří hledají hlubokou relaxaci a odpočinek od každodenního stresu.</p>
             <div class="price-list">
@@ -211,22 +206,18 @@
               <div><span>60 min</span><strong>850 Kč</strong></div>
             </div>
           </article>
-             <article class="card">
-            <h3>Čokoládová masáž</h3>
-            <p>Čokoládová masáž je luxusní terapeutická procedura, při které se používá hřejivá čokoládová směs k hladkému a příjemnému hladění pokožky. Tato masáž nejen uvolňuje napětí a hydratuje pokožku, ale také stimuluje smysly vůní a přináší pocit relaxace a blaha. Ideální pro ty, kteří hledají zážitek spojující péči o tělo se sladkým potěšením.</p>
+          <article class="card reveal">
+            <h3>Baňkování - statické / silikonové</h3>
+            <p>Baňkování, tradiční terapeutická metoda, využívá baňky s podtlakem k uvolnění svalového napětí a zlepšení průtoku krve. Tento proces může také podpořit detoxikaci těla tím, že stimuluje lymfatický systém a odplavuje toxiny. Baňky se aplikují na kůži a mohou zůstat na místě nebo se pohybovat podle potřeby klienta. Výsledkem je často uvolnění blokované energie a zlepšení celkového stavu těla a mysli.</p>
             <div class="price-list">
               <div><span>30 min</span><strong>520 Kč</strong></div>
               <div><span>45 min</span><strong>790 Kč</strong></div>
               <div><span>60 min</span><strong>850 Kč</strong></div>
             </div>
           </article>
-
-
-
-
         </div>
 
-        <div class="note">
+        <div class="note reveal">
           <p>Kompletní nabídku služeb a více informací najdete níže v sekci Rezervace</p>
         </div>
       </div>
@@ -235,25 +226,25 @@
     <!-- FAQ -->
     <section id="faq" class="section">
       <div class="container">
-        <h2>Časté dotazy (FAQ)</h2>
+        <h2 class="reveal">Časté dotazy (FAQ)</h2>
         <div class="faq">
-          <details>
+          <details class="reveal">
             <summary>Jak se připravit na masáž?</summary>
             <p>Přijďte 5–10 minut předem, napijte se vody a vezměte si pohodlné oblečení. Pokud máte zdravotní omezení, sdělte mi je prosím před začátkem.</p>
           </details>
-          <details>
+          <details class="reveal">
             <summary>Bolí sportovní masáž?</summary>
             <p>Může být intenzivnější, ale vše probíhá po domluvě a v toleranci. Kdykoli řekněte, pokud chcete jemnější tlak.</p>
           </details>
-          <details>
+          <details class="reveal">
             <summary>Jak často chodit na masáž?</summary>
             <p>Pro relax 1× za 2 týdny, pro cílené řešení potíží dočasně 1× týdně dle doporučení.</p>
           </details>
-          <details>
+          <details class="reveal">
             <summary>Co když mám akutní potíž?</summary>
             <p>Při horečce, infekci nebo akutním úrazu masáž odložte a kontaktujte lékaře. U chronických potíží se předem poraďte.</p>
           </details>
-          <details>
+          <details class="reveal">
             <summary>Vystavujete dárkové poukazy?</summary>
             <p>Ano, na libovolnou službu i částku. Napište mi nebo zavolejte.</p>
           </details>
@@ -261,119 +252,70 @@
       </div>
     </section>
 
-
-
-  
-    
-<!-- Reservio -->
-
- <section id="reservation" class="section alt-bg">
-  <div class="container">
-    <h2>Online rezervace</h2>
-    <p>Vyberte si termín, který vám vyhovuje:</p>
-
-    <iframe
-      src="https://tomas-kloc.reservio.com"
-      title="Rezervace – Tomáš Kloc"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      style="border:0; width:100%; height:700px;"
-      frameborder="0">
-    </iframe>
-
-  </div>
-</section>
-          
-
-
-<!-- Kontakt & dotaz -->
-<section id="contact" class="section">
-  <div class="container">
-
-    <!-- JEDEN společný nadpis -->
-    <h2 class="section-title">Kontakt</h2>
-
-    <!-- Dva sloupce v gridu -->
-    <div class="contact-grid">
-
-      <!-- Levý sloupec: info + mapa -->
-      <div class="contact-card">
-        <p><strong>Tomáš Kloc</strong></p>
-        <p>Topolová 2916/14, 106 00, Praha</p>
-        <p>Kentoya Fitness</p>
-         <p>Konzultace zdravotního stavu nebo druhu masáže:</p><p>Tel: <a href="tel:+420727853643">+420 727 853 643</a></p>
-         <p>Pomoc s rezervací:</p><p>Tel: <a href="tel:+420727853199">+420 727 853 199</a></p>
-        <p>IČ: 12345678</p>
-
+    <!-- Reservio -->
+    <section id="reservation" class="section alt-bg">
+      <div class="container">
+        <h2 class="reveal">Online rezervace</h2>
+        <p class="reveal">Vyberte si termín, který vám vyhovuje:</p>
         <iframe
-          title="Mapa – Kentoya Fitness"
+          class="booking-frame"
+          src="https://tomas-kloc.reservio.com"
+          title="Rezervace – Tomáš Kloc"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.6032640046724!2d14.505564676899265!3d50.05626291566721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b92543140eb85%3A0xa65c9d6b8abf654e!2sKentoya%20Fitness!5e0!3m2!1scs!2scz!4v1755791607577!5m2!1scs!2scz">
+          style="border:0; width:100%; height:700px;"
+          frameborder="0">
         </iframe>
       </div>
+    </section>
 
-      <!-- Pravý sloupec: úvod + formulář -->
-      <div class="contact-card">
-        <p class="intro">Máte dotaz? Napište mi nebo použijte formulář níže.</p>
-
-        <form action="https://formspree.io/f/xxxxxx" method="POST" class="contact-form">
-          <label>Jméno:
-            <input type="text" name="name" required>
-          </label>
-          <label>E-mail:
-            <input type="email" name="email" required>
-          </label>
-          <label>Zpráva:
-            <textarea name="message" rows="6" required></textarea>
-          </label>
-
-          <!-- honeypot -->
-          <input type="text" name="_gotcha" style="display:none">
-
-          <button type="submit" class="btn">Odeslat</button>
-        </form>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- e-mail antispam -->
-<script>
-  const m = "masaze" + "@" + "example.cz"; // ← změň na reálný e-mail
-  const a = document.getElementById("mail");
-  a.href = "mailto:" + m;
-  a.textContent = m;
-</script>
-
-
-
- <!-- Recenze 
-    <section id="reviews" class=" section-alt">
+    <!-- Kontakt -->
+    <section id="contact" class="section">
       <div class="container">
-        <h2>Recenze klientů</h2>
-        <div class="reviews">
-          <article class="review">
-            <div class="stars" aria-label="Hodnocení 5 z 5">★★★★★</div>
-            <p>„Po sportovní masáži se mi výrazně ulevilo od bolesti zad. Oceňuji profesionální přístup a čisté prostředí.“</p>
-            <p class="reviewer">— Petr N.</p>
-          </article>
-          <article class="review">
-            <div class="stars" aria-label="Hodnocení 5 z 5">★★★★★</div>
-            <p>„Skvělá relaxace po náročném týdnu. Líbilo se mi, že se ptá na potřeby a podle toho upraví sílu tlaku.“</p>
-            <p class="reviewer">— Klára V.</p>
-          </article>
-          <article class="review">
-            <div class="stars" aria-label="Hodnocení 5 z 5">★★★★★</div>
-            <p>„Lymfatická masáž mi pomohla s otoky nohou. Doporučuji objednat 75 minut – rozdíl je znát.“</p>
-            <p class="reviewer">— Martina S.</p>
-          </article>
+        <h2 class="section-title reveal">Kontakt</h2>
+
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <p><strong>Tomáš Kloc</strong></p>
+            <p>Topolová 2916/14, 106 00, Praha</p>
+            <p>Kentoya Fitness</p>
+            <p>Konzultace zdravotního stavu nebo druhu masáže:</p>
+            <p>Tel: <a href="tel:+420727853643">+420 727 853 643</a></p>
+            <p>Pomoc s rezervací:</p>
+            <p>Tel: <a href="tel:+420727853199">+420 727 853 199</a></p>
+            <p>IČ: 12345678</p>
+           
+
+            <iframe
+              class="map-frame"
+              title="Mapa – Kentoya Fitness"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.6032640046724!2d14.505564676899265!3d50.05626291566721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b92543140eb85%3A0xa65c9d6b8abf654e!2sKentoya%20Fitness!5e0!3m2!1scs!2scz!4v1755791607577!5m2!1scs!2scz">
+            </iframe>
+          </div>
+
+          <div class="contact-card reveal">
+            <p class="intro">Máte dotaz? Napište mi nebo použijte formulář níže.</p>
+            <form action="https://formspree.io/f/xxxxxx" method="POST" class="contact-form">
+              <label>Jméno:
+                <input type="text" name="name" required>
+              </label>
+              <label>E-mail:
+                <input type="email" name="email" required>
+              </label>
+              <label>Zpráva:
+                <textarea name="message" rows="6" required></textarea>
+              </label>
+              <input type="text" name="_gotcha" style="display:none" aria-hidden="true" tabindex="-1">
+              <button type="submit" class="btn">Odeslat</button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
--->
+  </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
@@ -386,7 +328,7 @@
     </div>
   </footer>
 
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
-
 </html>
