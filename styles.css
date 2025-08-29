@@ -6,6 +6,7 @@
   --brand-600:#2f8f73;
   --alt:#c7ad962f;            /* světlá šedá pro střídání sekcí */
   --shadow:0 10px 30px rgba(0,0,0,.08);
+  
 
  
   --hero-min: 420px;   /* min. výška */
@@ -90,9 +91,22 @@ img{max-width:100%;display:block}
 }
 
 /* Buttons */
-.btn{display:inline-block;border-radius:999px;font-weight:700;text-decoration:none;padding:.8rem 1.2rem;transition:transform .2s ease,filter .2s ease,box-shadow .2s ease}
-.btn-primary{background:var(--brand);color:#fff;box-shadow:0 6px 20px rgba(58,165,131,.25)}
-.btn-primary:hover{transform:scale(1.04);filter:brightness(1.05)}
+.btn{
+  display:inline-block;
+  padding:.8rem 1.2rem;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+  transition:transform .2s ease, filter .2s ease, box-shadow .2s ease;
+}
+.btn-primary{
+  background: var(--brand);
+  color:#fff;
+}
+.btn-primary:hover{
+  transform: scale(1.04);
+  filter: brightness(1.05);
+}
 
 /* O mně */
 .grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:start}
@@ -137,10 +151,45 @@ img{max-width:100%;display:block}
 .contact-form input,.contact-form textarea{font:inherit;padding:.75rem .85rem;border:1px solid #dfe6ee;border-radius:10px;background:#fff}
 .contact-form input:focus,.contact-form textarea:focus{outline:2px solid rgba(58,165,131,.25);border-color:var(--brand)}
 
+/* submit tlačítko bez šedého okraje */
+.contact-form .btn {
+  border: 0;                 /* zruší okraj */
+  -webkit-appearance: none;  /* Safari/iOS defaulty pryč */
+  appearance: none;
+  box-shadow: none;          /* kdyby prohlížeč přidával stín */
+}
+
+/* ať je stále vidět fokus pro klávesnici (doporučeno) */
+.contact-form .btn:focus { outline: none; }
+.contact-form .btn:focus-visible {
+  outline: 2px solid rgba(58,165,131,.45);
+  outline-offset: 2px;
+}
+
+
+
 /* Footer */
 .site-footer{padding:28px 0;border-top:1px solid #eef2f6;background:#fff}
-.footer-grid{display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.to-top{text-decoration:none;font-weight:700}
+.footer-grid{display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.to-top{text-decoration:none;font-weight:700;}
+/* Footer: barva + bez podtržení u Instagram/Facebook */
+.site-footer .social a{
+  color: var(--brand);        /* nebo konkrétní barva: #3aa583 */
+  text-decoration: none;      /* zruší podtržení */
+}
+
+.site-footer .social a:visited{
+  color: var(--brand);        /* aby nebyla fialová po návštěvě */
+}
+
+.site-footer .social a:hover,
+.site-footer .social a:focus-visible{
+  text-decoration: none;      /* ponechá bez podtržení i při hoveru */
+  filter: brightness(1.1);    /* volitelné zjemnění reakce */
+}
+
+/* pokud se ti náhodou dělal podtrh přes pseudo-prvek, vypni ho: */
+.site-footer .social a::after{ content: none; }
 
 /* Jemný reveal (nenápadné) */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease-out,transform .6s ease-out;will-change:opacity,transform}
@@ -269,10 +318,10 @@ img{max-width:100%;display:block}
 .contact-form label{ display:grid; gap:.35rem; font-weight:600 }
 .contact-form input, .contact-form textarea{
   font:inherit; padding:.75rem .85rem;
-  border:1px solid #dfe6ee; border-radius:10px; background:#fff;
+  border:1px solid #858585; border-radius:15px; background:#fff;
 }
 .contact-form input:focus, .contact-form textarea:focus{
   outline:2px solid rgba(58,165,131,.25); border-color:var(--brand); 
 }
 
-.contact-form textarea { min-height: 420px; } /* klidně 260–320px */
+.contact-form textarea { min-height: 400px; } /* klidně 260–320px */
