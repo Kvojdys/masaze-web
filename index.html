@@ -269,53 +269,73 @@ jak redukovat stres a zlepšit fyzický i duševní stav.</p>
       </div>
     </section>
 
-    <!-- Kontakt -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2 class="section-title reveal">Kontakt</h2>
+    <!-- Kontakt & dotaz (vylepšeno) -->
+<section id="contact" class="section">
+  <div class="container">
 
-        <div class="contact-grid">
-          <div class="contact-card reveal">
-            <p><strong>Tomáš Kloc</strong></p>
-            <p>Topolová 2916/14, 106 00, Praha</p>
-            <p>Kentoya Fitness</p>
-            <p>Konzultace zdravotního stavu nebo druhu masáže:</p>
-            <p>Tel: <a href="tel:+420727853643">+420 727 853 643</a></p>
-            <p>Pomoc s rezervací:</p>
-            <p>Tel: <a href="tel:+420727853199">+420 727 853 199</a></p>
-            <p>IČ: 12345678</p>
-           
+    <h2 class="section-title">Kontakt</h2>
 
-            <iframe
-              class="map-frame"
-              title="Mapa – Kentoya Fitness"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.6032640046724!2d14.505564676899265!3d50.05626291566721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b92543140eb85%3A0xa65c9d6b8abf654e!2sKentoya%20Fitness!5e0!3m2!1scs!2scz!4v1755791607577!5m2!1scs!2scz">
-            </iframe>
+    <div class="contact-grid">
+      <!-- Levý sloupec: info + větší mapa -->
+      <div class="contact-card">
+        <div class="contact-info">
+          <p><strong>Tomáš Kloc</strong></p>
+          <p>Topolová 2916/14, 106 00, Praha</p>
+          <p>Kentoya Fitness</p>
+
+          <div class="cta-tel">
+            <a class="btn-tel" href="tel:+420727853643" aria-label="Zavolat – konzultace">
+              <span class="btn-tel__icon" aria-hidden="true">📞</span>
+              Konzultace: <strong>+420 727 853 643</strong>
+            </a>
+            <a class="btn-tel" href="tel:+420727853199" aria-label="Zavolat – pomoc s rezervací">
+              <span class="btn-tel__icon" aria-hidden="true">📞</span>
+              Rezervace: <strong>+420 727 853 199</strong>
+            </a>
           </div>
 
-          <div class="contact-card reveal">
-            <p class="intro">Máte dotaz? Napište mi nebo použijte formulář níže.</p>
-            <form action="https://formspree.io/f/xxxxxx" method="POST" class="contact-form">
-              <label>Jméno:
-                <input type="text" name="name" required>
-              </label>
-              <label>E-mail:
-                <input type="email" name="email" required>
-              </label>
-              <label>Zpráva:
-                <textarea name="message" rows="6" required></textarea>
-              </label>
-              <input type="text" name="_gotcha" style="display:none" aria-hidden="true" tabindex="-1">
-              <button type="submit" class="btn">Odeslat</button>
-            </form>
-          </div>
+          <p>IČ: 12345678</p>
+          <p>E-mail: <a id="mail" href="#" rel="nofollow noopener">—</a></p>
+        </div>
+
+        <!-- Mapový box (větší, hezčí) -->
+        <div class="map-wrap">
+          <iframe
+            class="map-frame"
+            title="Mapa – Kentoya Fitness"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.6032640046724!2d14.505564676899265!3d50.05626291566721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b92543140eb85%3A0xa65c9d6b8abf654e!2sKentoya%20Fitness!5e0!3m2!1scs!2scz!4v1755791607577!5m2!1scs!2scz">
+          </iframe>
         </div>
       </div>
-    </section>
-  </main>
+
+      <!-- Pravý sloupec: formulář -->
+      <div class="contact-card">
+        <p class="intro">Máte dotaz? Napište mi nebo použijte formulář níže.</p>
+
+        <form action="https://formspree.io/f/xxxxxx" method="POST" class="contact-form">
+          <label>Jméno:
+            <input type="text" name="name" required>
+          </label>
+          <label>E-mail:
+            <input type="email" name="email" required>
+          </label>
+          <label>Zpráva:
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+
+          <!-- honeypot -->
+          <input type="text" name="_gotcha" style="display:none" aria-hidden="true" tabindex="-1">
+
+          <button type="submit" class="btn">Odeslat</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <footer class="site-footer">
     <div class="container footer-grid">
