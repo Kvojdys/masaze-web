@@ -325,3 +325,38 @@ img{max-width:100%;display:block}
 }
 
 .contact-form textarea { min-height: 400px; } /* klidně 260–320px */
+
+
+/* Google Forms – hezké zobrazení v kartě kontaktu */
+:root{
+  --gform-height-desktop: 720px;  /* ↑ sem uprav výšku podle potřeby */
+  --gform-height-mobile:  640px;
+}
+
+.gform-embed{
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: #eaf1f7; /* příjemné pozadí při načítání */
+}
+
+.gform-embed iframe{
+  display: block;
+  width: 100%;
+  height: var(--gform-height-desktop);
+  border: 0;
+}
+@media (max-width: 860px){
+  .gform-embed iframe{ height: var(--gform-height-mobile); }
+}
+
+.gform-fallback{
+  margin: .5rem 0 0;
+  font-size: .95rem;
+  color: var(--muted);
+}
+.gform-fallback a{
+  color: var(--brand);
+  text-decoration: none;
+}
+.gform-fallback a:hover{ filter: brightness(1.08); }

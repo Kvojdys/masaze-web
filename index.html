@@ -311,22 +311,23 @@ jak redukovat stres a zlepšit fyzický i duševní stav.</p>
       <div class="contact-card">
         <p class="intro"><b>Máte dotaz? Napište mi nebo použijte formulář níže.</b></p>
 
-        <form action="https://formspree.io/f/xxxxxx" method="POST" class="contact-form">
-          <label>Jméno:
-            <input type="text" name="name" required>
-          </label>
-          <label>E-mail:
-            <input type="email" name="email" required>
-          </label>
-          <label>Zpráva:
-            <textarea name="message" rows="6" required></textarea>
-          </label>
+        <!-- Google Forms embed (zdarma, bez měsíčního limitu) -->
+<div class="gform-embed">
+  <iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLScx5lxu2PpRmmbR0r0tTdM2UdOHhL2HQzyZ_TMrL1mcAYKtXQ/viewform?usp=header"
+    title="Kontaktní formulář"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    frameborder="0"
+    allowfullscreen>
+    Načítám formulář…
+  </iframe>
 
-          <!-- honeypot -->
-          <input type="text" name="_gotcha" style="display:none" aria-hidden="true" tabindex="-1">
-
-          <button type="submit" class="btn btn-primary">Odeslat</button>
-        </form>
+  <!-- Volitelná pojistka / otevřít v novém okně -->
+  <p class="gform-fallback">
+    Pokud se formulář nenačítá, <a href="https://docs.google.com/forms/d/e/1FAIpQLScx5lxu2PpRmmbR0r0tTdM2UdOHhL2HQzyZ_TMrL1mcAYKtXQ/viewform?usp=header" target="_blank" rel="noopener">otevřete ho zde</a>.
+  </p>
+</div>
       </div>
     </div>
   </div>
