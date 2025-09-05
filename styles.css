@@ -85,7 +85,7 @@ img{max-width:100%;display:block}
 /* „No-crop“ režim na malých displejích */
 @media (max-width:560px){
   .hero__img{
-    object-fit:contain;     /* nic se NEřeže, případně pruhy */
+/*    object-fit:contain;  */   /* nic se NEřeže, případně pruhy */
     object-position:center;
   }
 }
@@ -361,33 +361,28 @@ img{max-width:100%;display:block}
 }
 .gform-fallback a:hover{ filter: brightness(1.08); }
 
-/* MOBILE TUNING PRO HERO */
+/* --- HERO mobil BEZ pruhů --- */
+.hero__media{
+  background: transparent;           /* zruší černé pozadí za fotkou */
+}
+
+.hero__img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;      /* vynutí full-bleed, žádné pruhy */
+  object-position: 50% 12%;          /* posuň fokus (doladíš 6–18 %) */
+}
+
+/* mobilní ladění velikostí a výšky hero */
 @media (max-width: 560px){
+  .hero{ min-height: 90svh; }        /* klidně 85–100svh podle chuti */
 
-  /* 1) a) zvětšíme výšku hero na mobilech */
-  .hero{
-    min-height: 85svh;         /* klidně 90–100svh, podle chuti */
-  }
-
-  /* 1) b) obrázek přes celou plochu (žádné pruhy) */
-  .hero__img{
-    object-fit: cover;          /* bylo: contain */
-    object-position: 50% 10%;   /* doladění focussu pro mobil (hlava výš) */
-  }
-
-  /* 2) menší, čitelnější text na malém displeji */
   .hero__content h1{
-    font-size: clamp(1.45rem, 6vw, 2rem);  /* dřív min 2rem → moc velké */
+    font-size: clamp(1.35rem, 6.2vw, 1.9rem);
     line-height: 1.15;
-    letter-spacing: .01em;
   }
   .hero__content p{
     font-size: clamp(.95rem, 3.8vw, 1.05rem);
-    opacity: .95;
   }
-
-  /* volitelně: trochu menší tlačítko */
-  .hero .btn{
-    padding: .7rem 1rem;
-  }
+  .hero .btn{ padding: .7rem 1rem; }
 }
