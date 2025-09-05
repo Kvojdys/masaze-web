@@ -82,13 +82,8 @@ img{max-width:100%;display:block}
 .hero__content h1{margin:.2rem 0 .6rem;line-height:1.05;font-size:clamp(2rem,4vw,3.25rem);letter-spacing:.02em}
 .hero__content p{font-size:clamp(1rem,2.2vw,1.25rem);margin:0 0 1.2rem;opacity:.95}
 
-/* „No-crop“ režim na malých displejích */
-@media (max-width:560px){
-  .hero__img{
-/*    object-fit:contain;  */   /* nic se NEřeže, případně pruhy */
-     object-position: 75% 12%;
-  }
-}
+
+
 
 /* Buttons */
 .btn{
@@ -386,3 +381,7 @@ img{max-width:100%;display:block}
   }
   .hero .btn{ padding: .7rem 1rem; }
 }
+
+.hero__img{ object-position: 25% 12%; }     /* nebo s 'contain' */
+@media (max-width:560px){ .hero__img{ object-fit: contain; } }
+.hero-parallax__bg{ background-position: 50% var(--hero-focal); }
