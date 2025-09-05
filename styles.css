@@ -86,7 +86,7 @@ img{max-width:100%;display:block}
 @media (max-width:560px){
   .hero__img{
 /*    object-fit:contain;  */   /* nic se NEřeže, případně pruhy */
-    object-position:center;
+     object-position: 75% 12%;
   }
 }
 
